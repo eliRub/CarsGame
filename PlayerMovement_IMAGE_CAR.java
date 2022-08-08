@@ -3,7 +3,7 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class PlayerMovement_IMAGE_CAR implements KeyListener {
+public class PlayerMovement_IMAGE_CAR extends GameScene implements KeyListener {
 
     private Rectangles Board;
     private My_Image imageCar;
@@ -13,6 +13,7 @@ public class PlayerMovement_IMAGE_CAR implements KeyListener {
     private Frame[] frames;
 
     public PlayerMovement_IMAGE_CAR(Rectangles board, My_Image imageCar, Frame frame, My_Image[] obstacles, Frame[] frames){
+        super();
         this.Board = board;
         this.imageCar = imageCar;
         this.frame = frame;
@@ -45,11 +46,11 @@ public class PlayerMovement_IMAGE_CAR implements KeyListener {
             case KeyEvent.VK_LEFT:
                 this.imageCar.moveLeft();
                 this.frame.moveLeft();
-                 for(int i = 0; i < this.obstacles.length; i++){
+                for(int i = 0; i < this.obstacles.length; i++){
                     this.obstacles[i].moveCarsDown();
                     this.frames[i].moveDown();
                 }
-                 break;
+                break;
             case KeyEvent.VK_UP:
                  for(int i = 0; i < this.obstacles.length; i++){
                     this.obstacles[i].moveCarsDown();
@@ -57,6 +58,18 @@ public class PlayerMovement_IMAGE_CAR implements KeyListener {
                 }
                  break;
             case KeyEvent.VK_DOWN:
+                for(int i = 0; i < this.obstacles.length; i++){
+                    if (points < 3000) {
+                        this.obstacles[i].moveCarsUp();
+                        this.frames[i].moveUp();
+                    } else if (points > 3000 && points < 10000) {
+                        this.obstacles[i].moveCarsUp2();
+                        this.frames[i].moveUp2();
+                    } else {
+                        this.obstacles[i].moveCarsUp3();
+                        this.frames[i].moveUp3();
+                    }
+                }
                 break;
         }
     }

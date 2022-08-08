@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class GameScene extends JPanel {
     
-    private  int points;
+    protected int points;       // I did it public because I wanted to approach it from PlayerMovement_I_C class.
     // here I declare on the road and his frames
     private Rectangles BOARD;
     private Rectangles ROAD_1;
@@ -104,6 +104,9 @@ public class GameScene extends JPanel {
          this.mainGameLoop();
         }
 
+    public GameScene() {
+    }
+
     //this is the paint function
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -154,10 +157,10 @@ public class GameScene extends JPanel {
                     }
                      for(int i = 0; i < this.obstacles.length; i++){
                          int speedOfMovement = this.points;
-                         if (speedOfMovement < 2500) {
+                         if (speedOfMovement < 3000) {
                              this.obstacles[i].moveCarsDown();
                              this.frames[i].moveDown();
-                         } else if (speedOfMovement > 2500 && speedOfMovement < 10000) {
+                         } else if (speedOfMovement > 3000 && speedOfMovement < 15000) {
                              this.obstacles[i].moveCarsDown2();
                              this.frames[i].moveDown2();
                          } else {

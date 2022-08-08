@@ -23,18 +23,21 @@ public class My_Image extends Component {
     }
 
     public void moveRight(){
-        this.x += 15;
+        this.x += 12;
     }
     public void moveLeft(){
-        this.x -= 15;
+        this.x -= 12;
     }
 
-//    public void moveUp(){
-//        this.y -= 3;
-//    }
-//    public void moveDown(){
-//        this.y += 3;
-//    }
+    public void moveCarsUp(){
+        this.y -= 3;
+    }
+    public void moveCarsUp2(){
+        this.y -= 6;
+    }
+    public void moveCarsUp3(){
+        this.y -= 9;
+    }
 
     public void moveCarsDown(){
         this.y += 1;

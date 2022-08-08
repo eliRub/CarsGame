@@ -2,7 +2,7 @@ package Game_1;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainWindow extends JFrame {
+public class MainWindow {
 
     public static final int WINDOW_WIDTH = 720;
     public static final int WINDOW_HEIGHT = 600;

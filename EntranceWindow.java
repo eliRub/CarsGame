@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class EntranceWindow extends JFrame {
 
-    // Here we have a cool picture of the entrance to the game
+    // Here we have a picture of the entrance to the game
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         EntranceWindow entranceWindow = new EntranceWindow();
     }
@@ -37,7 +37,6 @@ public class EntranceWindow extends JFrame {
             this.dispose();
             MainWindow window = new MainWindow();
             window.run();
-
         });
         this.add(button);
     }

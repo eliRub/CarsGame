@@ -23,22 +23,28 @@ public class Rectangles {
         g.fillRect(this.x, this.y, this.width, this.height);
     }
 
-    public void moveRight(){
-        this.x += 15;
-    }
-    public void moveLeft(){
-        this.x -= 15;
+    public void paint2(Graphics g){
+        g.setColor(this.color);
+        g.drawRect(this.x, this.y, this.width, this.height);
     }
 
-//    public void moveUp(){
-//        this.y -= 2;
-//    }
-//    public void moveUp2() {
-//        this.y -= 4;
-//    }
-//    public void moveUp3() {
-//        this.y -= 6;
-//    }
+    public void moveRight(){
+        this.x += 12;
+    }
+    public void moveLeft(){
+        this.x -= 12;
+    }
+
+    public void moveUp(){
+        this.y -= 3;
+    }
+    public void moveUp2() {
+        this.y -= 6;
+    }
+    public void moveUp3() {
+        this.y -= 9;
+    }
+
     public void moveDown(){
         this.y += 1;
     }

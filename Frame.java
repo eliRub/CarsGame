@@ -23,15 +23,15 @@ public class Frame {
         frame.moveLeft();
     }
 
-//    public void moveUp(){
-//        frame.moveUp();
-//    }
-//    public void moveUp2() {
-//        frame.moveUp2();
-//    }
-//    public void moveUp3() {
-//        frame.moveUp3();
-//    }
+    public void moveUp(){
+        frame.moveUp();
+    }
+    public void moveUp2() {
+        frame.moveUp2();
+    }
+    public void moveUp3() {
+        frame.moveUp3();
+    }
 
 
     // this is the usual speed of movement, means-> if this.points < 10000.
