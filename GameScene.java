@@ -47,9 +47,9 @@ public class GameScene extends JPanel {
         this.imageCar = new My_Image(image, 250, height-220, frame);
 
         //It builds the obstacles and their frames
-        this.obstacles = new My_Image[500];
-        this.frames = new Frame[500];
-        this.rectangles = new Rectangles[500];
+        this.obstacles = new My_Image[530];
+        this.frames = new Frame[530];
+        this.rectangles = new Rectangles[530];
         Random random = new Random();
         //this is where the first car start(on -250)
         int min = -250;
