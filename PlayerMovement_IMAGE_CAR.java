@@ -55,7 +55,7 @@ public class PlayerMovement_IMAGE_CAR extends GameScene implements KeyListener {
                  for(int i = 0; i < this.obstacles.length; i++){
                     this.obstacles[i].moveCarsDown();
                     this.frames[i].moveDown();
-                }
+                 }
                  break;
             case KeyEvent.VK_DOWN:
                 for(int i = 0; i < this.obstacles.length; i++){
